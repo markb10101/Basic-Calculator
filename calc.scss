@@ -7,10 +7,24 @@
 // variables
 /////////////////////////////////////////////////
 
-$calculator-body: #999;
-$bg-link:       rgba(200,255,200,0.5);
+$calculator-background: #999;
+$calculator-border: #777;
+$calculator-shadow: #888;
 
+$screen-background: #3d3;
+$screen-shadow: rgba(0,0,0,0.25);
+$screen-text-shadow: rgba(0,0,0,0.25);
 
+$button-background: #777;
+$button-alt-background:  #559;
+$button-shadow: #444;
+$button-active: #888;
+$button-alt-active:  #448;
+$button-text: #fff;
+
+$link-background: rgba(200,255,200,0.5);
+
+////////////////////////////////
 // over-ride global defaults
 * {
     box-sizing: border-box;
@@ -32,29 +46,29 @@ body {
         h1 {
             font-size: 1.75rem;
         }
-
+        
         // main calculator container
         #calculator {
-            border: 4px solid #777;
+            border: 4px solid $calculator-border;
             width: 16rem;
             height: 27rem;
             padding: 20px;
             margin: 50px auto;
-            background-color: $calculator-body;
-            box-shadow: 2px 2px 12px #888;
+            background-color: $calculator-background;
+            box-shadow: 2px 2px 12px $calculator-shadow;
 
             // display screen
             #screen {
                 width: 100%;
                 flex-wrap: wrap;
-                box-shadow: 0 -2px 1px 0 rgba(0,0,0,0.25);
+                box-shadow: 0 -2px 1px 0 $screen-shadow;
                 height: 4rem;
-                background-color: #3d3;
+                background-color: $screen-background;
                 text-align: right;
                 margin-bottom: 16px;
                 font-size: 1.5rem;
                 padding: 1rem 0.5rem;
-                text-shadow: 2px 2px rgba(0,0,0,0.25);
+                text-shadow: 2px 2px $screen-text-shadow;
             
                 // boot-up screen
                 #sub-screen {
@@ -78,14 +92,14 @@ body {
                     flex: 1 0 20%;
                     margin: 5px;
                     height: 50px;
-                    background-color: #777;
-                    color: #fff;
+                    background-color: $button-background;
+                    color: $button-text;
                     border-radius: 5px;
-                    box-shadow: 1px 1px 2px #444;
+                    box-shadow: 1px 1px 2px $button-shadow;
             
                     &:active {
-                        border: 1px solid #777;
-                        background-color: #888;
+                        border: 1px solid $button-background;
+                        background-color: $button-active;
                         box-shadow: none;
                     }
 
@@ -101,11 +115,11 @@ body {
             
                 // different colour scheme for "c" and
                 button#equals,button#clr {
-                    background-color: #559;
+                    background-color: $button-alt-background;
             
                     &:active {
                         border: 1px solid #66A;
-                        background-color: #448;
+                        background-color: $button-alt-active;
                     }
                     &:focus {
                         outline: 0;
@@ -125,7 +139,7 @@ body {
             a {
                 color: black;
                 text-decoration: none;
-                background-color: $bg-link;
+                background-color: $link-background;
             }
         }
 
