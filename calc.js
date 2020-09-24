@@ -43,7 +43,7 @@ const buttonIdArray = ["clr", "brackets", "percentage", "division",
                     "sign", "n0", "period", "equals"];
 
 // array for the button text
-const buttonTextArray = ["C", "()", "%", "/",
+const buttonTextArray = ["C", "( )", "%", "/",
                         "7", "8", "9", "*",
                         "4", "5", "6", "-",
                         "1", "2", "3", "+",

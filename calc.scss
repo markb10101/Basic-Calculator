@@ -1,4 +1,14 @@
-// nology project 1: calculator
+/////////////////////////////////////////////////
+// nology Project 1: Calculator
+// Mark Birchall : 09/20
+/////////////////////////////////////////////////
+
+/////////////////////////////////////////////////
+// variables
+/////////////////////////////////////////////////
+
+$calculator-body: #999;
+$bg-link:       rgba(200,255,200,0.5);
 
 
 // over-ride global defaults
@@ -17,90 +27,109 @@ body {
     display: flex;
     justify-content: center;
     font-family: 'Roboto Mono', monospace;
-}
 
-// main calculator container
-#calculator {
-    border: 4px solid #777;
-    width: 16rem;
-    height: 27rem;
-    padding: 20px;
-    margin: 50px auto;
-    background-color: #999;
-    box-shadow: 2px 2px 12px #888;
+    #container {
+        h1 {
+            font-size: 1.75rem;
+        }
 
-    // display screen
-    #screen {
-        width: 100%;
-        flex-wrap: wrap;
-        box-shadow: 0 -2px 1px 0 rgba(0,0,0,0.25);
-        height: 4rem;
-        background-color: #3d3;
-        text-align: right;
-        margin-bottom: 16px;
-        font-size: 1.5rem;
-        padding: 1rem 0.5rem;
-        text-shadow: 2px 2px rgba(0,0,0,0.25);
-    
-        // boot-up screen
-        #sub-screen {
+        // main calculator container
+        #calculator {
+            border: 4px solid #777;
+            width: 16rem;
+            height: 27rem;
+            padding: 20px;
+            margin: 50px auto;
+            background-color: $calculator-body;
+            box-shadow: 2px 2px 12px #888;
+
+            // display screen
+            #screen {
+                width: 100%;
+                flex-wrap: wrap;
+                box-shadow: 0 -2px 1px 0 rgba(0,0,0,0.25);
+                height: 4rem;
+                background-color: #3d3;
+                text-align: right;
+                margin-bottom: 16px;
+                font-size: 1.5rem;
+                padding: 1rem 0.5rem;
+                text-shadow: 2px 2px rgba(0,0,0,0.25);
+            
+                // boot-up screen
+                #sub-screen {
+                    font-size: 1rem;
+                    position: relative;
+                    top: 1.6rem;
+                }
+            }
+
+            // container for the button divs
+            #calc-buttons {
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                justify-content: center;
+                margin-top: 24px;
+            
+                // buttons are programatically created
+                // by the js file
+                button {
+                    flex: 1 0 20%;
+                    margin: 5px;
+                    height: 50px;
+                    background-color: #777;
+                    color: #fff;
+                    border-radius: 5px;
+                    box-shadow: 1px 1px 2px #444;
+            
+                    &:active {
+                        border: 1px solid #777;
+                        background-color: #888;
+                        box-shadow: none;
+                    }
+
+                    &:focus {
+                        outline: 0;
+                    }
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+
+                }
+            
+                // different colour scheme for "c" and
+                button#equals,button#clr {
+                    background-color: #559;
+            
+                    &:active {
+                        border: 1px solid #66A;
+                        background-color: #448;
+                    }
+                    &:focus {
+                        outline: 0;
+                    }
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        // credit
+        div#credit {
+            text-align: center;
             font-size: 1rem;
-            position: relative;
-            top: 1.6rem;
-        }
-    }
 
-    // container for the button divs
-    #calc-buttons {
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
-        justify-content: center;
-        margin-top: 24px;
-    
-        // buttons are programatically created
-        // by the js file
-        button {
-            flex: 1 0 20%;
-            margin: 5px;
-            height: 50px;
-            background-color: #777;
-            color: #fff;
-            border-radius: 5px;
-            box-shadow: 1px 1px 2px #444;
-       
-            &:active {
-                border: 1px solid #777;
-                background-color: #888;
-                box-shadow: none;
-            }
-
-            &:focus {
-                outline: 0;
-            }
-
-            &:hover {
-                cursor: pointer;
-            }
-
-        }
-    
-        // different colour scheme for "c" and
-        button#equals,button#clr {
-            background-color: #559;
-    
-            &:active {
-                border: 1px solid #66A;
-                background-color: #448;
-            }
-            &:focus {
-                outline: 0;
-            }
-
-            &:hover {
-                cursor: pointer;
+            a {
+                color: black;
+                text-decoration: none;
+                background-color: $bg-link;
             }
         }
+
+
     }
 }
 
