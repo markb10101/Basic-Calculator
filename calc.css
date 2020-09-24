@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 600;
+}
+
+body {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#calculator {
+  border: 4px solid #777;
+  width: 16rem;
+  height: 27rem;
+  padding: 20px;
+  margin: 50px auto;
+  background-color: #999;
+  box-shadow: 2px 2px 12px #888;
+}
+#calculator #screen {
+  width: 100%;
+  flex-wrap: wrap;
+  box-shadow: 0 -2px 1px 0 rgba(0, 0, 0, 0.25);
+  height: 4rem;
+  background-color: #3d3;
+  text-align: right;
+  margin-bottom: 16px;
+  font-size: 1.5rem;
+  padding: 1rem 0.5rem;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.25);
+}
+#calculator #screen #sub-screen {
+  font-size: 1rem;
+  position: relative;
+  top: 1.8rem;
+}
+#calculator #calc-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  margin-top: 24px;
+}
+#calculator #calc-buttons button {
+  flex: 1 0 20%;
+  margin: 5px;
+  height: 50px;
+  background-color: #777;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px #444;
+}
+#calculator #calc-buttons button:active {
+  border: 1px solid #777;
+  background-color: #888;
+  box-shadow: none;
+}
+#calculator #calc-buttons button:focus {
+  outline: 0;
+}
+#calculator #calc-buttons button:hover {
+  cursor: pointer;
+}
+#calculator #calc-buttons button#equals, #calculator #calc-buttons button#clr {
+  background-color: #559;
+}
+#calculator #calc-buttons button#equals:active, #calculator #calc-buttons button#clr:active {
+  border: 1px solid #66A;
+  background-color: #448;
+}
+#calculator #calc-buttons button#equals:focus, #calculator #calc-buttons button#clr:focus {
+  outline: 0;
+}
+#calculator #calc-buttons button#equals:hover, #calculator #calc-buttons button#clr:hover {
+  cursor: pointer;
+}
