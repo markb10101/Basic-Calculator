@@ -37,7 +37,7 @@ body {
 #calculator #screen #sub-screen {
   font-size: 1rem;
   position: relative;
-  top: 1.8rem;
+  top: 1.6rem;
 }
 #calculator #calc-buttons {
   display: flex;
