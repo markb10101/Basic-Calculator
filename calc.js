@@ -1,20 +1,17 @@
+// mark birchall
+// calculator 
+
 // todo
-/////////////////////////////////////
-// make new repo and git-tracked
-/////////////////////////////////////
-// reduce code by:
-// reduce repetition in functions around % checks
+//
 /////////////////////////////////////
 // more than one decimal point???
 // extras:
 // adding sign button to existing calc being displayed
-// limit size of user input (as well as fontsize change)
 // how to display temp error message on screen
 // user can input more than one set of brackets
 // repeat last operation if you press multiple equals signs
 // 19%/17% should be > 1 !!!
 // adding commas to display
-// handle numbers bigger than display by reducing font-size? (14digits+)
 // add a delete button?
 // allow user to click inside number to edit it?
 // tell user they are trying to make an illegal op
@@ -158,8 +155,10 @@ function sign() {
 }
 
 function period() {
+    if(!inputString.includes(".")){
     inputString += ".";
     evalString += ".";
+    }
 }
 
 function equals() {
